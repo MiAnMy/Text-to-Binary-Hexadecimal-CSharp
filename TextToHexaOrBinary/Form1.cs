@@ -3,15 +3,19 @@ using System.Windows.Forms;
 
 namespace TextToHexaOrBinary
 {
-    public partial class Form1 : Form
+    public partial class ToHexOrBin : Form
     {
-        public Form1()
+        public ToHexOrBin()
         {
             InitializeComponent();
         }
         private void ToBinary_Click(object sender, EventArgs e)
         {
-            Wynik.Text=BinaryClass.TextToBinary(Text.Text);
+            Result.Text=BinaryClass.TextToBinary(TextToConv.Text);
+        }
+        private void ToHexa_Click(object sender, EventArgs e)
+        {
+            Result.Text = HexClass.TextToBinary(TextToConv.Text);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TextToHexaOrBinary
 {
-    partial class Form1
+    partial class ToHexOrBin
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -30,17 +30,18 @@
         {
             this.ToBinary = new System.Windows.Forms.Button();
             this.ToHexa = new System.Windows.Forms.Button();
-            this.Text = new System.Windows.Forms.TextBox();
-            this.Wynik = new System.Windows.Forms.Label();
+            this.TextToConv = new System.Windows.Forms.TextBox();
+            this.Result = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ToBinary
             // 
             this.ToBinary.AutoSize = true;
             this.ToBinary.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ToBinary.Location = new System.Drawing.Point(26, 52);
+            this.ToBinary.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ToBinary.Location = new System.Drawing.Point(0, 20);
             this.ToBinary.Name = "ToBinary";
-            this.ToBinary.Size = new System.Drawing.Size(46, 23);
+            this.ToBinary.Size = new System.Drawing.Size(350, 23);
             this.ToBinary.TabIndex = 0;
             this.ToBinary.Text = "Binary";
             this.ToBinary.UseVisualStyleBackColor = true;
@@ -50,39 +51,47 @@
             // 
             this.ToHexa.AutoSize = true;
             this.ToHexa.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ToHexa.Location = new System.Drawing.Point(221, 52);
+            this.ToHexa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ToHexa.Location = new System.Drawing.Point(0, 43);
             this.ToHexa.Name = "ToHexa";
-            this.ToHexa.Size = new System.Drawing.Size(78, 23);
+            this.ToHexa.Size = new System.Drawing.Size(350, 23);
             this.ToHexa.TabIndex = 1;
             this.ToHexa.Text = "Hexadecimal";
             this.ToHexa.UseVisualStyleBackColor = true;
+            this.ToHexa.Click += new System.EventHandler(this.ToHexa_Click);
             // 
-            // Text
+            // TextToConv
             // 
-            this.Text.Location = new System.Drawing.Point(97, 12);
-            this.Text.Name = "Text";
-            this.Text.Size = new System.Drawing.Size(100, 20);
-            this.Text.TabIndex = 2;
+            this.TextToConv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TextToConv.Location = new System.Drawing.Point(0, 0);
+            this.TextToConv.Name = "TextToConv";
+            this.TextToConv.Size = new System.Drawing.Size(350, 20);
+            this.TextToConv.TabIndex = 2;
             // 
-            // Wynik
+            // Result
             // 
-            this.Wynik.AutoSize = true;
-            this.Wynik.Location = new System.Drawing.Point(126, 95);
-            this.Wynik.Name = "Wynik";
-            this.Wynik.Size = new System.Drawing.Size(35, 13);
-            this.Wynik.TabIndex = 3;
-            this.Wynik.Text = "label1";
+            this.Result.AutoSize = true;
+            this.Result.Location = new System.Drawing.Point(-3, 69);
+            this.Result.Name = "Result";
+            this.Result.Size = new System.Drawing.Size(0, 13);
+            this.Result.TabIndex = 3;
             // 
-            // Form1
+            // ToHexOrBin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 288);
-            this.Controls.Add(this.Wynik);
-            this.Controls.Add(this.Text);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(350, 80);
             this.Controls.Add(this.ToHexa);
             this.Controls.Add(this.ToBinary);
-            this.Name = "Form1";
+            this.Controls.Add(this.Result);
+            this.Controls.Add(this.TextToConv);
+            this.MaximizeBox = false;
+            this.Name = "ToHexOrBin";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ToHexOrBin";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,8 +101,8 @@
 
         private System.Windows.Forms.Button ToBinary;
         private System.Windows.Forms.Button ToHexa;
-        private System.Windows.Forms.TextBox Text;
-        private System.Windows.Forms.Label Wynik;
+        private System.Windows.Forms.TextBox TextToConv;
+        private System.Windows.Forms.Label Result;
     }
 }
 
